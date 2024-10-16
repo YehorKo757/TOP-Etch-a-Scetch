@@ -15,7 +15,7 @@ div {
     display: flex;
     max-width: 960px;
     min-width: 500px;
-    max-height: 960px;
+    max-height: 100vh;
     aspect-ratio: 1/1;
     flex-direction: column;
     justify-content: space-evenly;
@@ -36,6 +36,7 @@ div {
     aspect-ratio: 1/1;
     min-width: 20px;
     max-width: 100%;
+    flex: 1;
 }
 
 .item {
@@ -44,4 +45,5 @@ div {
     max-width: 100%;
     margin: 0;
     padding: 0;
+    flex: 1;
 }
