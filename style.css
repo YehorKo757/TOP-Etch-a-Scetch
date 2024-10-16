@@ -23,6 +23,7 @@ div {
     flex-direction: column;
     justify-content: space-evenly;
     overflow: hidden;
+    margin-bottom: 1vh;
     
 }
 
