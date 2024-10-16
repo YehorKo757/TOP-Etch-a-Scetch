@@ -18,15 +18,17 @@ let item = undefined;
 let size = undefined;
 
 function makeGrid(size = 16) {
-
+    let counter = 0;
     for (let i=0; i<=size-1; i++){
         row = document.createElement("div");
         row.classList.add("row");
     
         for (let j=0; j<=size-1; j++){
             item = document.createElement("div");
-            item.setAttribute("id", "item");
+            item.classList.add("item");
+            item.setAttribute("id", `${counter}`);
             row.appendChild(item);
+            counter++;
         }
         container.appendChild(row);
     }
@@ -57,4 +59,11 @@ button.addEventListener("click", () => {
 
     makeGrid(sizeInp);
 
+})
+container.addEventListener("onmouseenter", (event) => {
+    let target = event.target;
+    if (target.id) {
+        document.getElementById(target.id).style.backgroundColor = "red";
+    }
+    
 })

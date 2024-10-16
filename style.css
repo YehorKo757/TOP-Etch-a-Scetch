@@ -7,16 +7,32 @@ div {
 .container-button {
     display: flex;
     justify-content: space-evenly;
+    max-width: 960px;
+    min-width: 500px;
 }
 
 .container {
     display: flex;
+    max-width: 960px;
+    min-width: 500px;
+    max-height: 960px;
+    aspect-ratio: 1/1;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-#item {
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+.item {
     border: 2px, solid, blue;
-}
-
-#item:hover {
-    background-color: aqua;
+    aspect-ratio: 1/1;
+    min-width: 20px;
+    max-width: 100%;
+    margin: 0;
 }
