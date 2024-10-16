@@ -14,6 +14,7 @@ container.classList.add("container");
 body.appendChild(container);
 
 let row = undefined;
+let border = undefined;
 let item = undefined;
 let size = undefined;
 
@@ -24,10 +25,14 @@ function makeGrid(size = 16) {
         row.classList.add("row");
     
         for (let j=0; j<=size-1; j++){
+            border = document.createElement("div");
+            border.classList.add("border");
+            row.appendChild(border);
             item = document.createElement("div");
             item.classList.add("item");
             item.setAttribute("id", `${counter}`);
-            row.appendChild(item);
+            item.style.opacity = "0";
+            border.appendChild(item);
             counter++;
         }
         container.appendChild(row);
@@ -60,12 +65,19 @@ button.addEventListener("click", () => {
     makeGrid(sizeInp);
 
 })
+
+function random(number=255) {
+    return Math.floor(Math.random() * (number + 1));
+}
+
 container.addEventListener("mouseover", (event) => {
     let target = event.target;
     if (target.id) {
         console.log(`Mouse over ${target.id}`);
         console.log(document.getElementById(target.id));
-        document.getElementById(target.id).style.backgroundColor = "red";
+        document.getElementById(target.id).style.backgroundColor = `rgb(${random()} ${random()} ${random()})`;
+        document.getElementById(target.id).style.opacity = `${parseFloat(document.getElementById(target.id).style.opacity) + 0.1}`;
+        console.log(document.getElementById(target.id).style.opacity)
     }
     
 })
