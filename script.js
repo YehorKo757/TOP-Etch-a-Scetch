@@ -60,9 +60,11 @@ button.addEventListener("click", () => {
     makeGrid(sizeInp);
 
 })
-container.addEventListener("onmouseenter", (event) => {
+container.addEventListener("mouseover", (event) => {
     let target = event.target;
     if (target.id) {
+        console.log(`Mouse over ${target.id}`);
+        console.log(document.getElementById(target.id));
         document.getElementById(target.id).style.backgroundColor = "red";
     }
     
