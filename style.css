@@ -1,24 +1,29 @@
+html, body {
+    max-height: 100vh;
+    aspect-ratio: 1/1;
+}
 div {
     /* border: 2px, solid, red; */
-    margin: 2px;
-    padding: 2px;
+    margin: 0;
+    padding: 0;
 }
 
 .container-button {
     display: flex;
     justify-content: space-evenly;
     max-width: 960px;
-    min-width: 500px;
+    padding: 5px;
 }
 
 .container {
     display: flex;
-    max-width: 960px;
     min-width: 500px;
-    max-height: 100vh;
+    max-height: 94vh;
     aspect-ratio: 1/1;
     flex-direction: column;
     justify-content: space-evenly;
+    overflow: hidden;
+    
 }
 
 .row {
@@ -26,24 +31,20 @@ div {
     justify-content: space-evenly;
     margin: 0;
     padding: 0;
-    flex: 1;
+    flex: 1 0 auto;
 }
 
 .border {
-    border: 2px, solid, rgb(0, 0, 255);
+    border: 1px, solid, rgb(0, 0, 255);
     padding: 0;
     margin: 0;
     aspect-ratio: 1/1;
-    min-width: 20px;
-    max-width: 100%;
-    flex: 1;
+    flex: 1 0 auto;
 }
 
 .item {
     aspect-ratio: 1/1;
-    min-width: 20px;
-    max-width: 100%;
     margin: 0;
     padding: 0;
-    flex: 1;
+    flex: 1 0 auto;
 }
